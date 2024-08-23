@@ -1,0 +1,246 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #fafafa;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #212121;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+section {
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.hero {
+
+        background-image: url('https://cd039d9380.cbaul-cdnwnd.com/1621927996238bd447597419c3fabbb4/200000012-937cb937cd/images-pexels-com-photos-1022928-pexels-photo-1022928-auto-compress-cs-tinysrgb-dpr-2-h-650-w-940.webp?ph=cd039d9380');
+        background-size: cover; /* Makes sure the image covers the entire div */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+        height: 100vh; /* Adjusts the height of the hero section */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(19, 17, 17); /* Ensures text is readable over the image */
+        text-align: center;
+        height: 100vh;
+        flex-direction: column;
+        text-shadow: 2px 2px 4px rgba(152, 151, 151, 0.7);
+        padding: 1rem;
+        transition: background-color 0.5s ease;
+
+    }
+    
+    #home .hero h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+    
+    #home .hero p {
+        font-size: 1.5em;
+        margin-top: 0.5em;
+    }
+    
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-out forwards;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fafafa;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 5rem;
+    height: 4px;
+    background-color: #fafafa;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background-color: #303030;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 2px solid #303030;
+    border-radius: 5px;
+    background-color: #171717;
+    color: #fafafa;
+}
+
+form button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #fafafa;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #000;
+    color: #fafafa;
+}
+
+footer {
+    background-color: #212121;
+    padding: 1rem;
+    text-align: center;
+    color: #9e9e9e;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+}
