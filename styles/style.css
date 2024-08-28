@@ -24,6 +24,23 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.logo a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ece6e6;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 1rem 2rem;
+
+}
+
+.logo a:hover {
+    color: #000;
+    background-color: #fafafa;
+    border-radius: 5px; /* Change to your preferred hover color */
+}
+
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -66,21 +83,39 @@ section {
         align-items: center;
         color: rgb(19, 17, 17); /* Ensures text is readable over the image */
         text-align: center;
+        text-size-adjust: 500px;
         height: 100vh;
         flex-direction: column;
         text-shadow: 2px 2px 4px rgba(152, 151, 151, 0.7);
         padding: 1rem;
         transition: background-color 0.5s ease;
+        
 
     }
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Black with 50% opacity */
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1; /* Ensure text appears above the overlay */
+}
     
     #home .hero h1 {
-        font-size: 3em;
+        font-size: 4.5em;
         margin: 0;
+        color: #fafafa;
     }
     
     #home .hero p {
-        font-size: 1.5em;
+        font-size: 2.2em;
+        color: #fafafa;
         margin-top: 0.5em;
     }
     
@@ -243,4 +278,24 @@ footer {
     section {
         padding: 3rem 1rem;
     }
+}
+a i.fa-instagram {
+    font-size: 24px; /* Adjust the size of the icon */
+    color: #C13584; /* Instagram's brand color */
+    transition: color 0.3s;
+}
+
+a i.fa-instagram:hover {
+    color: #E1306C; /* Darker shade on hover */
+}
+a i.fa-twitter {
+    font-size: 24px; /* Adjust the size of the icon */
+    color: #1DA1F2; /* Twitter's brand color */
+    transition: color 0.3s;
+    padding: 0.9rem ;
+    padding-left: .7rem;
+}
+
+a i.fa-twitter:hover {
+    color: #0d8dd7; /* Darker shade on hover */
 }
